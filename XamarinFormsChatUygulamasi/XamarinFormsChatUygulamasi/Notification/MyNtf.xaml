@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+      BackgroundColor="Wheat"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsChatUygulamasi.Notification.MyNtf">
+
+    
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        
+        <Entry BackgroundColor="Gray"  x:Name="nameLogin"  Placeholder="Kullanıcı adınız"></Entry>
+        <Button Text="Login" Clicked="btn_clicked"></Button>
+        
+    </StackLayout>
+    
+</pages:PopupPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormsChatUygulamasi.Views.PageRoom">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="ToolbarItemAdd_Clicked"/>
+        <ToolbarItem Text="?" Clicked="ToolbarItemInfo_Clicked"/>
+
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding .}" SeparatorVisibility="None" x:Name="ListRooms"
+                  IsPullToRefreshEnabled="True"
+                  RowHeight="150"
+                  ItemSelected="ListRooms_ItemSelected"
+                  Refreshing="ListRooms_Refreshing"
+                  
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell >
+                        <StackLayout Margin="10" BackgroundColor="AliceBlue" >
+                            <Label Text="{Binding Name}"  FontAttributes="Bold" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Large" />
+  
+
+                        </StackLayout>
+
+                    </ViewCell>
+
+
+
+                </DataTemplate>
+
+
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
